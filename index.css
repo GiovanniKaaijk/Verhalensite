@@ -1,0 +1,247 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+body {
+    background-color: white;
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4.5em;
+    color: rgb(0, 214, 108);
+}
+
+h2 {
+    font-size: 3em;
+}
+
+header {
+    height: 8em;
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .15);
+}
+
+header section {
+    width: 22em;
+    margin: 1em 0;
+}
+
+header section h2 {
+    float: right;
+    margin-top: .4em;
+    color: rgb(0, 214, 108);
+    font-weight: 600;
+
+}
+
+header section img {
+    height: 6em;
+    width: 6em;
+    border-radius: 50px 50px;
+    margin-left: 1em;
+    float: left;
+}
+
+header section h2 {
+    text-align: center;
+
+}
+
+
+
+#slider {
+    margin: auto;
+    text-align: center;
+    margin-top: 8em;
+}
+
+#slider section {
+    position: relative;
+}
+
+#slider img {
+    width: 100vw;
+}
+
+#slider h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+    padding: 3% 1%;
+}
+
+/* #FBF7F4 */
+
+main section {
+    background-color: rgb(0, 214, 108);
+    margin: 3em auto;
+    width: 80%;
+    font-size: 1em;
+    border-radius: 20px;
+    padding-top: 1%;
+}
+
+main section h2 {
+    text-align: center;
+    background-color: rgb(0, 214, 108);
+    color: white;
+    padding: 8% 0;
+}
+
+
+section div {
+    display: flex;
+    overflow-x: scroll;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 2% 0;
+    border-bottom: solid 1px rgb(96, 96, 96);
+    border-left: solid 1px rgb(96, 96, 96);
+    border-right: solid 1px rgb(96, 96, 96);
+}
+
+section div a {
+    padding: 1em;
+    height: 40%;
+    width: 40%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 10px;
+}
+
+section div img {
+    height: 20%;
+    width: 40%;
+    border-radius: 10px;
+}
+
+}
+
+main section:nth-child(2) h2,
+main section:nth-child(2) {
+    background-color: rgb(40, 0, 160);
+}
+
+main section:nth-child(3) h2,
+main section:nth-child(3) {
+    background-color: rgb(255, 50, 104);
+}
+
+main section:nth-child(5) h2,
+main section:nth-child(5) {
+    background-color: rgb(40, 0, 160);
+
+}
+
+main section h2 {
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+}
+
+section div a img {
+    margin: 1em 0;
+    min-height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+section div article {
+    margin: 1em;
+}
+
+section div a article img {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+article h3,
+article p {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa-user-circle {
+    display: block;
+    color: rgb(0, 214, 108);
+    float: right;
+    position: absolute;
+    margin-left: 70%;
+}
+
+section section p {
+    color: #2c2f86;
+    font-size: 2.8em;
+    position: absolute;
+    width: 45%;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 3% 1%;
+    text-align: left;
+    font-weight: bolder;
+    font-weight: 600;
+}
+
+main form h1 {
+    color: #2c2f86;
+    margin: 1em 0;
+}
+
+
+form {
+    background-color: #eedac8;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    transition: all .5s;
+    padding: 1em;
+    color: rgb(96, 96, 96);
+    margin-top: 15em;
+}
+
+input,
+button {
+    font-size: 2em;
+    padding: 1.5% 2%;
+    margin-bottom: 6%;
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 20px;
+    width: 40%;
+}
+
+label {
+    margin-bottom: 2%;
+    font-size: 2em;
+}
+
+button {
+    padding: 2% 6%;
+    background-color: rgb(0, 214, 108);
+    color: white;
+    width: 30%;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 1px 0px rgb(30, 145, 98);
+}
