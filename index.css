@@ -1,7 +1,15 @@
+:root {
+    --positionY: 0;
+    --positionX: 0;
+}
+
 * {
     margin: 0 0;
     padding: 0 0;
+    transition: all 0.5s;
 }
+
+/* box sizing: border-box; */
 
 body {
     background-color: white;
@@ -9,77 +17,131 @@ body {
 }
 
 h1 {
-    font-size: 4.5em;
+    font-size: 1.6em;
     color: rgb(0, 214, 108);
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2em;
 }
 
+/* ---------------------------- header -------------------- */
+
 header {
-    height: 8em;
+    height: 4em;
     width: 100vw;
     background-color: white;
     position: fixed;
     z-index: 1;
     top: 0;
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .15);
+    display: flex;
+    justify-content: flex-end;
 }
 
-header section {
-    width: 22em;
+header div {
+    width: 12em;
     margin: 1em 0;
+    margin-right: auto;
 }
 
-header section h2 {
+header div h2 {
     float: right;
-    margin-top: .4em;
     color: rgb(0, 214, 108);
     font-weight: 600;
+    font-size: 1.8em;
 
 }
 
-header section img {
-    height: 6em;
-    width: 6em;
+header div a img {
+    height: 2em;
+    width: 2em;
     border-radius: 50px 50px;
     margin-left: 1em;
     float: left;
 }
 
-header section h2 {
+header div h2 {
+    margin-left: -10em;
+
+}
+
+.fa-user-circle,
+.fa-book {
+    display: block;
+    color: rgb(0, 214, 108);
+    height: 2em;
+    width: 2em;
+    margin-top: 0.5em;
+}
+
+/* ---------------------------- background -------------------- */
+
+body > section {
     text-align: center;
 
+    display: flex;
+    justify-content: center;
 }
 
-
-
-#slider {
-    margin: auto;
-    text-align: center;
-    margin-top: 8em;
+#login > section {
+    background-image: url(images/jarrad-horne-541354-unsplash.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 25em;
+    width: 100%;
 }
 
-#slider section {
-    position: relative;
+#overview > section {
+    background-image: url(images/manuel-moreno-39516-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 30em;
+    width: 100%;
 }
 
-#slider img {
-    width: 100vw;
+#overview > section,
+#login > section {
+    clip-path: polygon(60% 10%, 80% 10%, 100% 10%, 100% 90%, 60% 90%, 50% 100%, 40% 90%, 0 90%, 0 10%, 20% 10%);
 }
 
-#slider h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+body > section h1 {
     background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 3% 1%;
+    width: 65vw;
+    height: 5%;
+    margin-top: 8em;
+    justify-content: center;
+}
+
+body > section p {
+    font-size: 1.8em;
+    color: rgb(0, 214, 108);
+    border-radius: 10px;
+    text-align: left;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    width: 40vw;
+    margin-top: 4em;
+    padding: 1% 2%;
+    height: 20%;
 }
 
 /* #FBF7F4 */
+
+/* ---------------------------- verhalen -------------------- */
+
+.sort {
+    margin-left: 3%;
+}
+
+.hide {
+    display: none;
+}
 
 main section {
     background-color: rgb(0, 214, 108);
@@ -88,6 +150,7 @@ main section {
     font-size: 1em;
     border-radius: 20px;
     padding-top: 1%;
+    max-width: 45em;
 }
 
 main section h2 {
@@ -125,20 +188,18 @@ section div img {
     border-radius: 10px;
 }
 
+main section:nth-child(1) h2,
+main section:nth-child(1) {
+    background-color: rgb(40, 0, 160);
 }
 
 main section:nth-child(2) h2,
 main section:nth-child(2) {
-    background-color: rgb(40, 0, 160);
-}
-
-main section:nth-child(3) h2,
-main section:nth-child(3) {
     background-color: rgb(255, 50, 104);
 }
 
-main section:nth-child(5) h2,
-main section:nth-child(5) {
+main section:nth-child(4) h2,
+main section:nth-child(4) {
     background-color: rgb(40, 0, 160);
 
 }
@@ -150,21 +211,14 @@ main section h2 {
 
 section div a img {
     margin: 1em 0;
-    min-height: 100%;
     width: 100%;
     flex-shrink: 0;
     border-radius: 10px;
     cursor: pointer;
 }
 
-section div article {
-    margin: 1em;
-}
-
 section div a article img {
-    height: 100%;
     width: 100%;
-    flex-shrink: 0;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -180,59 +234,49 @@ a {
     text-decoration: none;
 }
 
-.fa-user-circle {
-    display: block;
-    color: rgb(0, 214, 108);
-    float: right;
-    position: absolute;
-    margin-left: 70%;
+/* ---------------------------- form -------------------- */
+
+/* required/input/fieldset :invalid/:valid */
+
+#login {
+    background-color: #eedac8;
 }
 
-section section p {
+form legend {
     color: #2c2f86;
-    font-size: 2.8em;
-    position: absolute;
-    width: 45%;
-    top: 40%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    padding: 3% 1%;
-    text-align: left;
-    font-weight: bolder;
-    font-weight: 600;
-}
-
-main form h1 {
-    color: #2c2f86;
-    margin: 1em 0;
+    margin-bottom: .5em;
+    font-size: 2em;
 }
 
 
 form {
-    background-color: #eedac8;
+    width: 50%;
+    background-color: #FBF7F4;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     transition: all .5s;
     padding: 1em;
     color: rgb(96, 96, 96);
-    margin-top: 15em;
+    padding-top: 5em;
+    border-radius: 1.25em;
+    margin-top: 1%;
+    margin-bottom: 3%;
 }
 
 input,
 button {
-    font-size: 2em;
-    padding: 1.5% 2%;
-    margin-bottom: 6%;
+    font-size: 1em;
+    padding: 1.5% 0.5%;
+    margin-bottom: 4%;
     border: 1px solid rgb(96, 96, 96);
-    border-radius: 20px;
-    width: 40%;
+    border-radius: 8px;
+    width: 50%;
 }
 
 label {
-    margin-bottom: 2%;
-    font-size: 2em;
+    margin-bottom: 1%;
+    font-size: 1em;
 }
 
 button {
@@ -242,6 +286,280 @@ button {
     width: 30%;
     text-align: center;
     border: none;
-    border-radius: 50px;
+    border-radius: 1.25em;
     box-shadow: 0px 4px 1px 0px rgb(30, 145, 98);
+}
+
+
+button:hover {
+    background-color: rgb(2, 242, 122);
+    cursor: pointer;
+}
+
+fieldset {
+    border: 0;
+    border-style: none;
+    display: flex;
+    margin-top: -3em;
+}
+
+
+/* javascript boekenlijst */
+
+.boekenlijst {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+/* -------------- boekenlijst --------------- */
+
+.boekenlijst {
+    position: fixed;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(144, 144, 144);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 30%;
+    top: 10%;
+    right: 2%;
+    min-height: 60%;
+    min-width: 25em;
+    padding-bottom: 1em;
+}
+
+.boekenlijst h4 {
+    text-align: center;
+    margin: 2% 0;
+    border-bottom: solid rgb(144, 144, 144);
+    border-width: 1px;
+    font-size: 1.6em;
+    color: rgb(0, 214, 108);
+}
+
+.boekenlijst > section {
+    padding-left: 1em;
+    border-bottom: solid rgb(144, 144, 144);
+    border-width: 1px;
+    padding-bottom: 1em;
+    display: flex;
+}
+
+.boekenlijst section h5 {
+    font-size: 1.6em;
+}
+
+.boekenlijst > section {
+    justify-content: flex-start;
+}
+
+.boekenlijst a {
+    display: block;
+    justify-content: flex-end;
+    color: rgb(0, 214, 108);
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+.fa-arrow-alt-circle-down {
+    color: rgb(0, 214, 108);
+    margin-top: 100%;
+    margin-left: 46%;
+    margin-bottom: 0.2em;
+}
+
+.fa-arrow-right:hover,
+.fa-user-circle:hover,
+.fa-book:hover {
+    transform: scale(0.9, 0.9);
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+
+
+/* --------------- verhaal moe -------------*/
+
+#moe {
+    background-color: #FBF7F4;
+}
+
+#moe main {
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+#moe main img {
+    margin: auto;
+    width: 13em;
+    height: 100%;
+}
+
+#moe main p,
+#moe main div {
+    margin: auto;
+    max-width: 40em;
+    min-width: 20em;
+}
+
+
+/* ------------ blur mouse ----------- */
+
+#moe {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#moe main p,
+#moe main div {
+    filter: blur(3px);
+}
+
+#moe div:hover {
+    filter: blur(0px);
+}
+
+div.background {
+    pointer-events: none;
+    transition: 0.2s;
+    overflow-x: hidden;
+    text-align: center;
+    clip-path: circle(40% at 50% 50%);
+    position: absolute;
+    left: var(--positionX);
+    top: var(--positionY);
+    width: 4000px;
+    height: 4000px;
+    background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(100, 100, 100, 0.7) 8%, rgba(0, 0, 0, 1) 100%);
+}
+
+
+/* ------- media -------- */
+
+@media (min-width: 950px) {
+    #overview > main {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 3%;
+        margin-bottom: 5em;
+    }
+
+    #overview main section {
+        min-width: 80%;
+        justify-content: center;
+        margin: 3% auto;
+    }
+
+    body > section h1 {
+        width: 50vw;
+    }
+
+    main section:nth-child(5) h2,
+    main section:nth-child(5) {
+        background-color: rgb(255, 50, 104);
+    }
+
+
+
+}
+
+
+/* keyframes */
+
+@keyframes downloadAnimatie {
+    0% {
+        transform: rotate(0deg) scale(1, 1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2, 1.2);
+    }
+    100% {
+        transform: rotate(0deg) scale(1, 1);
+    }
+}
+
+.fa-arrow-alt-circle-down {
+    cursor: pointer;
+    margin-bottom: 4%;
+}
+
+
+.download {
+    animation-name: downloadAnimatie;
+    animation-duration: 0.5s;
+}
+
+
+.loadingbar {
+    width: 30%;
+    height: 1em;
+    border: solid 1px;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1.25em;
+    display: none;
+}
+
+.display {
+    display: block;
+}
+
+.load {
+    overflow: hidden;
+    width: calc(100%-10px);
+    height: 100%;
+    border-radius: 1.25em;
+    background: linear-gradient(rgb(0, 214, 108), #25c491);
+    animation: load 5s ease;
+}
+
+.loadingbar p {
+    transition: 0.1s;
+    margin-top: 3%;
+    text-align: center;
+}
+
+@keyframes load {
+    0% {
+        width: 2%;
+    }
+    10% {
+        width: 10%;
+    }
+    20% {
+        width: 20%;
+    }
+    30% {
+        width: 30%;
+    }
+    40% {
+        width: 40%;
+    }
+    50% {
+        width: 50%;
+    }
+    60% {
+        width: 60%;
+    }
+    70% {
+        width: 70%;
+    }
+    80% {
+        width: 80%;
+    }
+    90% {
+        width: 90%;
+    }
+    100% {
+        width: 100%;
+    }
 }

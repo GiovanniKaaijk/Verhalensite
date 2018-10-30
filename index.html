@@ -2,36 +2,54 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Verhalensite</title>
 </head>
 
-<body>
+<body id="overview">
     <header>
-        <section>
+        <div>
             <a href="index.html">
                 <h2>Transavia</h2>
                 <img src="images/WhatsApp%20Image%202018-09-27%20at%2011.37.44.jpeg" alt="logo transavia"></a>
-        </section>
+        </div>
+        <i class="fas fa-book fa-2x boekenicon"></i>
         <a href="login.html">
-            <i class="fas fa-user-circle fa-6x"></i></a>
-    </header>
+            <i class="fas fa-user-circle fa-2x"></i></a>
 
-    <section id="slider">
-        <section>
-            <h1>99 verhalen voor onderweg</h1>
-            <img src="images/martha-domi.png" alt="">
-        </section>
+    </header>
+    <section>
+        <h1>99 verhalen voor onderweg</h1>
     </section>
 
+    <div class="boekenlijst">
+        <h4>Mijn boekenlijst</h4>
+        <section>
+            <section>
+                <h5>Moe</h5>
+                <p>tekst tekst tekst</p>
+            </section>
+            <a href="moe.html">
+                <i class="fas fa-arrow-right fa-2x"></i></a>
+        </section>
+        <i class="fas fa-arrow-alt-circle-down fa-2x"></i>
+        <div class="loadingbar">
+            <div class="load"></div>
+            <p>0/100</p>
+        </div>
+
+    </div>
+    <!--<button class="sort">Sorteer</button>-->
     <main>
         <section>
+
             <h2>Kleurrijk</h2>
             <div>
-                <a href="#">
+                <a href="moe.html">
                     <article>
                         <img src="images/boek-aiden.jpeg" alt="foto boek droom">
                         <h3>Droom</h3>
@@ -195,6 +213,7 @@
         </section>
 
     </main>
+    <script src="javascript.js"></script>
 </body>
 
 </html>
