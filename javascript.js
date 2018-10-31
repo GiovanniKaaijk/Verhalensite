@@ -12,11 +12,10 @@ var laadPercentage;
 laadPercentage = 10;
 
 var sorteerKleur = document.querySelector('.kleurrijk');
-var kleurrijk = document.querySelector('main section:nth-child(1)');
 var komisch = document.querySelector('main section:nth-child(2)');
 var monogroom = document.querySelector('main section:nth-child(3)');
 var psychydelisch = document.querySelector('main section:nth-child(4)');
-var drama = document.querySelector('main section:nth-child(5)');
+
 
 var openHart = document.querySelector('.closed-heart');
 var dichtHart = document.querySelector('.open-heart');
@@ -48,6 +47,8 @@ function animatie() {
     }, 1000);
     setTimeout(function () {
         loadingBar.classList.remove('display');
+        downloadKnop.classList.remove('fa-arrow-alt-circle-down');
+        downloadKnop.classList.add('fa-check-circle');
         clearInterval(optellen);
     }, 5000);
 }
@@ -57,7 +58,6 @@ function kleur() {
     komisch.classList.toggle('hide');
     monogroom.classList.toggle('hide');
     psychydelisch.classList.toggle('hide');
-    drama.classList.toggle('hide');
 }
 
 

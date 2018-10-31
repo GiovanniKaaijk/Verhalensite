@@ -409,7 +409,8 @@ input:invalid {
     margin-right: 1em;
 }
 
-.fa-arrow-alt-circle-down {
+.fa-arrow-alt-circle-down,
+.fa-check-circle {
     color: rgb(0, 214, 108);
     margin-top: 100%;
     margin-left: 46%;
