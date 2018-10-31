@@ -371,7 +371,7 @@ input:invalid {
     top: 10%;
     right: 2%;
     min-height: 60%;
-    min-width: 25em;
+    min-width: 18em;
     padding-bottom: 1em;
 }
 
@@ -536,6 +536,7 @@ div.background {
     #login > section {
         clip-path: polygon(60% 10%, 80% 10%, 100% 10%, 100% 90%, 60% 90%, 50% 95%, 40% 90%, 0 90%, 0 10%, 20% 10%);
     }
+
 }
 
 /* keyframes */
