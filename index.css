@@ -118,7 +118,7 @@ body > section h1 {
     justify-content: center;
 }
 
-body > section p {
+/* body > section p {
     font-size: 1.8em;
     color: rgb(0, 214, 108);
     border-radius: 10px;
@@ -131,95 +131,121 @@ body > section p {
     padding: 1% 2%;
     height: 20%;
 }
+*/
 
 /* #FBF7F4 */
 
 /* ---------------------------- verhalen -------------------- */
 
-#overview button {
-    margin: 3em 2.5em;
-    width: 17%;
-    min-width: 80px;
-    height: 3em;
-    border-radius: 5.25em;
-    background-color: rgb(2, 242, 122);
-}
-
-#overview button:hover {
-    background-color: rgb(255, 50, 104);
-    cursor: pointer;
-}
-
 .hide {
     display: none;
 }
 
+
+
+/* hartje met hulp van https://codepen.io/IndieDevAustin/pen/XeqJmX */
+
+.heart {
+    display: inline-block;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.heart::before {
+    font-size: 1.5em;
+    color: #000;
+    content: '♥';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heart::after {
+    font-size: 1.5em;
+    color: red;
+    content: '♥';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s;
+}
+
+.heart.liked::after {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
 main section {
-    background-color: rgb(0, 214, 108);
-    margin: 3em auto;
-    width: 80%;
+    margin: -3.3em auto;
+    width: 100%;
     font-size: 1em;
-    border-radius: 20px;
     padding-top: 1%;
-    max-width: 45em;
+    background-color: #f3e5d8;
+    clip-path: polygon(0% 0%, 40% 0, 50% 8%, 60% 0, 100% 0, 100% 92%, 60% 92%, 50% 100%, 40% 92%, 0 92%);
 }
 
 main section h2 {
-    text-align: center;
-    background-color: rgb(0, 214, 108);
-    color: white;
-    padding: 8% 0;
+    text-align: left;
+    color: rgb(40, 0, 160);
+    padding: 1% 0;
+    margin-left: 6%;
 }
 
 
 section div {
     display: flex;
     overflow-x: scroll;
-    background-color: white;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     padding: 2% 0;
-    border-bottom: solid 1px rgb(96, 96, 96);
-    border-left: solid 1px rgb(96, 96, 96);
-    border-right: solid 1px rgb(96, 96, 96);
 }
 
 section div a,
 section div article {
-    padding: 1em;
-    height: 40%;
-    width: 40%;
+    height: 10%;
+    width: 10%;
     flex-shrink: 0;
     flex-grow: 0;
     border-radius: 10px;
 }
 
+section div article {
+    background-color: #FBF7F4;
+    margin-bottom: 4em;
+    max-height: 22em;
+    min-height: 22em;
+    margin-left: 6%;
+    padding: 1em 2em;
+}
+
 section div img {
-    height: 20%;
-    width: 40%;
+    height: 11em;
+    width: 30em;
     border-radius: 10px;
 }
 
-main section:nth-child(1) h2,
-main section:nth-child(1) {
-    background-color: rgb(40, 0, 160);
+
+main section {
+    padding-top: 4.3em;
 }
 
-main section:nth-child(2) h2,
-main section:nth-child(2) {
-    background-color: rgb(255, 50, 104);
-}
-
-main section:nth-child(4) h2,
+main section:nth-child(2),
 main section:nth-child(4) {
-    background-color: rgb(40, 0, 160);
-
+    background-color: #FBF7F4;
 }
 
-main section h2 {
-    border-top-left-radius: .5em;
-    border-top-right-radius: .5em;
+
+main section:nth-child(2) article,
+main section:nth-child(4) article {
+    background-color: #f3e5d8;
 }
+
+main section:nth-child(4) {
+    clip-path: none;
+}
+
+
 
 section div a img {
     margin: 1em 0;
@@ -258,19 +284,25 @@ a {
 /* :invalid/:valid */
 
 #login {
-    background-color: #eedac8;
+    background-color: rgb(0, 214, 108);
 }
 
 form legend {
     color: #2c2f86;
     margin-bottom: .5em;
     font-size: 2em;
+    margin-left: 7%;
+    font-weight: bolder;
+    width: 85%;
+    border-bottom: 0.5px solid rgba(96, 96, 96, 0.5);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 
 form {
-    width: 50%;
-    background-color: #FBF7F4;
+    width: 35%;
+    background-color: white;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -279,57 +311,55 @@ form {
     color: rgb(96, 96, 96);
     padding-top: 5em;
     border-radius: 1.25em;
-    margin-top: 1%;
+    margin-top: 25vh;
     margin-bottom: 3%;
 }
 
-input,
-#login button {
+
+input {
     font-size: 1em;
     padding: 1.5% 0.5%;
+    margin: 0 auto;
     margin-bottom: 4%;
-    border: 1px solid rgb(96, 96, 96);
+    border: 1px solid rgba(96, 96, 96, 0.7);
     border-radius: 8px;
-    width: 50%;
+    width: 81%;
+    padding: 2% 2%;
 }
 
 label {
     margin-bottom: 1%;
+    margin-left: 7.5%;
     font-size: 1em;
-}
-
-#login button {
-    padding: 2% 6%;
-    background-color: rgb(0, 214, 108);
-    color: white;
-    width: 30%;
-    text-align: center;
-    border: none;
-    border-radius: 1.25em;
-    box-shadow: 0px 4px 1px 0px rgb(30, 145, 98);
+    font-weight: bolder;
 }
 
 
-#login button:hover {
-    background-color: rgb(2, 242, 122);
-    cursor: pointer;
-}
+
 
 #login fieldset input:nth-child(6) {
     padding: 2% 6%;
-    background-color: rgb(0, 214, 108);
+    background-color: rgb(255, 50, 104);
     color: white;
     width: 30%;
     text-align: center;
     border: none;
     border-radius: 1.25em;
-    box-shadow: 0px 4px 1px 0px rgb(30, 145, 98);
+    box-shadow: 0px 3px 1px 0px #ca2b55;
+    font-weight: bolder;
+    margin-left: 7.5%;
 }
 
 #login fieldset input:nth-child(6):hover {
-    background-color: rgb(2, 242, 122);
+    background-color: #ff658e;
     cursor: pointer;
 }
+
+
+#login fieldset input:nth-child(6):focus {
+    box-shadow: inset 0 0.125em 0.0625em #ca2b55;
+}
+
 
 fieldset {
     border: 0;
@@ -343,8 +373,8 @@ input:valid {
     color: white;
 }
 
-input:invalid {
-    background-color: rgba(255, 0, 0, 0.4);
+input:focus {
+    width: 85%;
 }
 
 /* javascript boekenlijst */
@@ -492,20 +522,7 @@ div.background {
 
 /* ------- media -------- */
 
-@media (min-width: 950px) {
-    #overview > main {
-        display: grid;
-        grid-template-columns: auto auto;
-        margin-top: 3%;
-        margin-bottom: 5em;
-    }
-
-    #overview main section {
-        min-width: 80%;
-        justify-content: center;
-        margin: 3% auto;
-        max-width: 10em;
-    }
+@media (min-width: 60em) {
 
     body > section h1 {
         width: 50vw;
@@ -520,7 +537,14 @@ div.background {
 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 60em) {
+    form {
+        width: 55%;
+    }
+}
+
+
+@media (max-width: 40em) {
     body > section p {
         height: 45%;
         width: 40vw;
@@ -529,13 +553,14 @@ div.background {
     body > section h1 {
         height: 13%;
     }
+
+    form {
+        margin-top: 25vh;
+        width: 80%;
+    }
 }
 
-@media (max-width: 450px) {
-    #overview > section,
-    #login > section {
-        clip-path: polygon(60% 10%, 80% 10%, 100% 10%, 100% 90%, 60% 90%, 50% 95%, 40% 90%, 0 90%, 0 10%, 20% 10%);
-    }
+
 
 }
 
@@ -637,10 +662,10 @@ div.background {
         transform: scale(1, 1);
     }
     50% {
-        transform: scale(1.3, 1.3);
+        transform: scale(1.4, 1.4) rotate(20deg);
     }
     100% {
-        transform: scale(1, 1);
+        transform: scale(1, 1) rotate(0deg);
     }
 }
 

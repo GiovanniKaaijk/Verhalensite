@@ -11,14 +11,10 @@ var percentage = document.querySelector('.loadingbar p');
 var laadPercentage;
 laadPercentage = 10;
 
-var sorteerKleur = document.querySelector('.kleurrijk');
-var komisch = document.querySelector('main section:nth-child(2)');
-var monogroom = document.querySelector('main section:nth-child(3)');
-var psychydelisch = document.querySelector('main section:nth-child(4)');
+var hartje = document.querySelectorAll('.heart');
 
 
-var openHart = document.querySelector('.closed-heart');
-var dichtHart = document.querySelector('.open-heart');
+
 
 function optellen() {
     laadPercentage = laadPercentage + 10;
@@ -54,21 +50,6 @@ function animatie() {
 }
 
 
-function kleur() {
-    komisch.classList.toggle('hide');
-    monogroom.classList.toggle('hide');
-    psychydelisch.classList.toggle('hide');
-}
-
-
-function hartje() {
-    openHart.classList.toggle('hide');
-    dichtHart.classList.toggle('hide');
-    boekenIcon.classList.toggle('scale');
-    setTimeout(function () {
-        boekenIcon.classList.toggle('scale');
-    }, 500);
-}
 
 boekenIcon.addEventListener('click', function () {
     boekenLijst.classList.toggle('show');
@@ -76,7 +57,16 @@ boekenIcon.addEventListener('click', function () {
 downloadKnop.addEventListener('click', animatie);
 
 
-sorteerKleur.addEventListener('click', kleur);
+var i = 0;
+for (i = 0; i < hartje.length; i++) {
+    console.log('hartje');
+    hartje[i].addEventListener('click', toggle);
+}
 
-openHart.addEventListener('click', hartje);
-dichtHart.addEventListener('click', hartje);
+function toggle(e) {
+    e.currentTarget.classList.toggle('liked');
+    boekenIcon.classList.toggle('scale');
+    setTimeout(function () {
+        boekenIcon.classList.toggle('scale');
+    }, 500);
+}
