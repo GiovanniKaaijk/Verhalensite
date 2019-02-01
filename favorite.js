@@ -7,7 +7,8 @@ var trashBin = document.querySelectorAll('.fa-trash-alt');
 var i = 0;
 
 var row = '';
-
+var counter = 0;
+var blankstate = document.querySelector('.blank');
 
 var allButtons = document.querySelectorAll('.fa-arrow-alt-circle-down');
 var x = 0;
@@ -39,6 +40,7 @@ for (i = 0; i < trashBin.length; i++) {
 
 
 function deleteRow(e) {
+    counter += 1;
     row = e.currentTarget.parentElement;
     console.log(row);
     row.classList.toggle('opacity');
@@ -46,4 +48,8 @@ function deleteRow(e) {
     setTimeout(function () {
         row.classList.toggle('delete');
     }, 500);
+    console.log(counter);
+    if (counter >= 4) {
+        blankstate.classList.toggle('hide');
+    }
 }

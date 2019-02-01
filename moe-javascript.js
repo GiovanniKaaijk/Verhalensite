@@ -13,4 +13,5 @@ document.addEventListener("mousemove", function (event) {
 
     document.body.style.setProperty('--positionY', posY);
     document.body.style.setProperty('--positionX', posX);
+    console.log(posX, posY);
 });

@@ -112,20 +112,7 @@ header div h2 {
     margin-top: 7em;
 }
 
-/* body > section p {
-    font-size: 1.8em;
-    color: rgb(0, 214, 108);
-    border-radius: 10px;
-    text-align: left;
-    font-weight: bolder;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 15px;
-    width: 40vw;
-    margin-top: 4em;
-    padding: 1% 2%;
-    height: 20%;
-}
-*/
+
 
 /* #FBF7F4 */
 
@@ -144,6 +131,8 @@ header div h2 {
     position: relative;
     font-size: 1.5em;
     cursor: pointer;
+    margin-right: 9%;
+    float: right;
 }
 
 .heart::before {
@@ -226,7 +215,7 @@ section div article {
 
 section div img {
     height: 11em;
-    width: 30em;
+    min-width: 7em;
     border-radius: 10px;
 }
 
@@ -268,11 +257,20 @@ section div a article img {
     cursor: pointer;
 }
 
+#overview section h2 {
+    margin-left: 5%;
+}
+
 article h3,
 article p {
     text-decoration: none;
     list-style-type: none;
     color: black;
+}
+
+article h3 {
+    margin-top: 6%;
+    width: 50%;
 }
 
 a {
@@ -288,10 +286,12 @@ a {
 
 /* ---------------------------- form -------------------- */
 
-/* :invalid/:valid */
-
 #login {
     background-color: rgb(0, 214, 108);
+    background-image: url(images/martha-dominguez-de-gouveia-747676-unsplash.jpg);
+    background-size: 93em;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #login form legend {
@@ -308,7 +308,7 @@ a {
 
 
 #login form {
-    width: 35%;
+    width: 40%;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -376,12 +376,12 @@ a {
 }
 
 #login input:valid {
-    background-color: rgb(2, 242, 122);
+    background-color: rgba(2, 242, 122, 0.7);
     color: white;
 }
 
 #login input:focus {
-    width: 85%;
+    width: 81%;
 }
 
 
@@ -390,79 +390,14 @@ a {
     opacity: 1;
 }
 
-/* -------------- boekenlijst ---------------
-
-.boekenlijst {
-    position: fixed;
-    display: block;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(144, 144, 144);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 30%;
-    top: 10%;
-    right: 2%;
-    min-height: 60%;
-    min-width: 18em;
-    padding-bottom: 1em;
-    z-index: 1;
-}
-
-.boekenlijst h4 {
-    text-align: center;
-    margin: 2% 0;
-    border-bottom: solid rgb(144, 144, 144);
-    border-width: 1px;
-    font-size: 1.6em;
-    color: rgb(0, 214, 108);
-}
-
-.boekenlijst > section {
-    padding-left: 1em;
-    border-bottom: solid rgb(144, 144, 144);
-    border-width: 1px;
-    padding-bottom: 1em;
-    display: flex;
-}
-
-.boekenlijst section h5 {
-    font-size: 1.6em;
-}
-
-.boekenlijst > section {
-    justify-content: flex-start;
-}
-
-.boekenlijst a {
-    display: block;
-    justify-content: flex-end;
-    color: rgb(0, 214, 108);
-    margin-top: 0.5em;
-    margin-left: auto;
-    margin-right: 1em;
-}
-
-#overview .fa-arrow-alt-circle-down,
-#overview .fa-check-circle {
-    color: rgb(0, 214, 108);
-    margin-top: 100%;
-    margin-left: 46%;
-    margin-bottom: 0.2em;
-}
-
-.boekenlijst > h6 {
-    color: color: rgb(0, 214, 108);
-    margin-left: 40%;
-}
-*/
 
 .fa-arrow-right:hover,
 .fa-user-circle:hover,
 .fa-book:hover {
-    transform: scale(0.9, 0.9);
+    transform: scale(0.98, 0.98);
     transition: all 0.1s;
     cursor: pointer;
+    color: #2c2f86;
 }
 
 
@@ -483,7 +418,7 @@ a {
     margin-top: 13em;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    width: 55vw;
+    width: 45vw;
     min-height: 37em;
     margin-bottom: 1em;
 }
@@ -501,11 +436,16 @@ a {
     border-bottom-right-radius: 0;
 }
 
+.blank {
+    margin-top: 1em;
+    text-align: center;
+}
+
 #favorite > main > div > section {
     width: 90%;
     margin: 1em auto 0;
     display: grid;
-    grid-template-columns: auto auto auto 8% 8% 10%;
+    grid-template-columns: auto auto auto 8% 8% 15%;
     grid-template-rows: 40% 20% 40%;
     padding-bottom: 1em;
     background-color: transparent;
@@ -563,7 +503,7 @@ a {
     grid-column: 2/3;
     grid-row: 1/2;
     font-weight: bolder;
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0;
     padding: 0;
 }
@@ -607,18 +547,7 @@ a {
     display: block;
 }
 
-@keyframes spinner {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg;
-        )
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
 
 
 
@@ -640,14 +569,7 @@ a {
 
 
 
-@keyframes shrink {
-    0% {
-        height: 5em;
-    }
-    100% {
-        height: 0em;
-    }
-}
+
 
 
 /* --------------- verhaal moe -------------*/
@@ -670,11 +592,16 @@ a {
     height: 100%;
 }
 
-#moe main p,
-#moe main div {
+#moe main p {
     margin: auto;
-    max-width: 40em;
+    max-width: 31em;
     min-width: 20em;
+}
+
+#moe main div {
+    max-width: 31em;
+    min-width: 20em;
+    margin: auto;
 }
 
 
@@ -690,9 +617,13 @@ a {
     filter: blur(3px);
 }
 
+
+
 #moe div:hover {
     filter: blur(0px);
 }
+
+
 
 div.background {
     pointer-events: none;
@@ -705,55 +636,168 @@ div.background {
     top: var(--positionY);
     width: 4000px;
     height: 4000px;
-    background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(100, 100, 100, 0.7) 8%, rgba(0, 0, 0, 1) 100%);
+    background-image: radial-gradient(ellipse at center, transparent 0%, rgba(100, 100, 100, 0.7) 8%, rgba(0, 0, 0, 1) 100%);
 }
+
+
+
+
+
+
 
 
 /* ------- media -------- */
 
-@media (min-width: 60em) {
+/* login */
 
-    body > section h1 {
-        width: 40vw;
-    }
-
-    main section:nth-child(5) h2,
-    main section:nth-child(5) {
-        background-color: rgb(255, 50, 104);
-    }
-
-
-
-}
-
-@media (max-width: 60em) {
-    form {
-        width: 55%;
+@media(max-width: 60em) {
+    #login form {
+        width: 50%;
     }
 }
 
-
-@media (max-width: 40em) {
-    body > section p {
-        height: 45%;
-        width: 40vw;
+@media(max-width: 40em) {
+    #login form {
+        width: 85%;
     }
-
-    body > section h1 {
-        height: 13%;
-    }
-
-    form {
-        margin-top: 25vh;
-        width: 80%;
+    #login fieldset input:nth-child(6) {
+        width: 40%;
     }
 }
 
 
 
+/* favorieten */
+
+@media(max-width: 80em) {
+    #favorite > main > div > section {
+        grid-template-columns: auto auto auto 8% 8% 15%;
+
+    }
 }
 
-/* keyframes */
+@media(max-width: 78em) {
+    #favorite > main > div > section {
+        grid-template-columns: auto auto auto 8% 8% 15%;
+
+    }
+}
+
+@media(max-width: 75em) {
+    #favorite > main {
+        width: 60%;
+    }
+}
+
+@media(max-width: 57em) {
+    #favorite > main {
+        width: 75%;
+    }
+}
+
+@media(max-width: 46em) {
+    #favorite > main {
+        width: 95%;
+        grid-template-columns: 10% 30% 34% 8% 8% 15%;
+        grid-column-gap: 1em;
+    }
+    #favorite > main > div > section h2 {
+        margin-left: 3em;
+    }
+
+    #favorite > main > div > section p {
+        margin-left: 6em;
+    }
+    section div article {
+        /*background-color: #FBF7F4;*/
+        margin-left: 3%;
+        padding: 1em 2.5em;
+    }
+}
+
+
+/* overview */
+
+@media(max-width: 69em) {
+    #overview > section h1 {
+        width: 45vw;
+        height: 15%;
+    }
+}
+
+@media(max-width: 55em) {
+    #overview > section h1 {
+        width: 55vw;
+        height: 15%;
+    }
+    .heart {
+        margin-right: -1em;
+    }
+
+}
+
+@media(max-width: 38em) {
+    #overview main section {
+        clip-path: polygon(0% 0%, 40% 0, 50% 3%, 60% 0, 100% 0, 100% 92%, 60% 92%, 50% 95%, 40% 92%, 0 92%);
+    }
+    .heart {
+        margin-right: -2em;
+    }
+    #overview section article p {
+        width: 6em;
+    }
+}
+
+@media(max-width: 35em) {
+    #overview > section h1 {
+        width: 85vw;
+        height: 15%;
+    }
+}
+
+/* moe */
+
+@media (min-width: 70em) {
+    #moe main div:nth-last-of-type(1) {
+        margin-right: 16em;
+    }
+    #moe main div:nth-last-of-type(2) {
+        margin-left: 15em;
+    }
+    #moe main div:nth-last-of-type(3) {
+        margin-right: 5em;
+    }
+    #moe main div:nth-last-of-type(4) {
+        margin-left: 8em;
+    }
+    #moe main div:nth-last-of-type(5) {
+        margin-right: 9em;
+    }
+}
+
+/* keyframes*/
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg;
+        )
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        height: 5em;
+    }
+    100% {
+        height: 0em;
+    }
+}
 
 @keyframes load {
     0% {
